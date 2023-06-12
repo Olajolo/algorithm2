@@ -1,0 +1,15 @@
+Algorithm FindDistinctElementsSum(set1, set2):
+    distinctElements = []
+    sum = 0
+    
+    for element in set1:
+        if element not in distinctElements:
+            append element to distinctElements
+            sum = sum + element
+    
+    for element in set2:
+        if element not in distinctElements:
+            append element to distinctElements
+            sum = sum + element
+    
+    print sum
