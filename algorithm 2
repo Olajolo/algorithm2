@@ -1,0 +1,85 @@
+def sum_of_unique_elements(array_one, array_two):
+"""
+This function returns the sum of the unique elements in the two arrays.
+
+Args:
+array_one: The first array.
+array_two: The second array.
+
+Returns:
+The sum of the unique elements in the two arrays.
+"""
+
+# Initialize sum = 0.
+sum = 0
+
+# Compare each element of array_one with array_two.
+for element in array_one:
+if element not in array_two:
+sum += element
+
+# Do the vice versa to add elements from array_two.
+for element in array_two:
+if element not in array_one:
+sum += element
+
+# Return the sum.
+return sum
+
+
+if __name__ == "__main__":
+# Define the two arrays.
+array_one = [1, 2, 3, 4, 5]
+array_two = [2, 4, 6, 8, 10]
+
+# Print the sum of the unique elements in the two arrays.
+print(sum_of_unique_elements(array_one, array_two))
+
+
+
+/*************problem2**************/
+
+
+def find_duplicates(array):
+  """
+  This function finds the duplicate elements in the array.
+
+  Args:
+    array: The array.
+
+  Returns:
+    A list of the duplicate elements in the array.
+  """
+
+  # Initialize a set to store the unique elements in the array.
+  unique_elements = set()
+
+  # Initialize a list to store the duplicate elements in the array.
+  duplicates = []
+
+  # Iterate over the array.
+  for element in array:
+    # If the element is not in the set of unique elements, then it is a duplicate.
+    if element not in unique_elements:
+      unique_elements.add(element)
+    else:
+      duplicates.append(element)
+
+  # Return the list of duplicate elements.
+  return duplicates
+
+
+def main():
+  # Define the array.
+  array = [1, 2, 3, 2, 4, 5]
+
+  # Find the duplicate elements in the array.
+  duplicates = find_duplicates(array)
+
+  # Print the duplicate elements.
+  print(duplicates)
+
+
+if __name__ == "__main__":
+  main()
+
